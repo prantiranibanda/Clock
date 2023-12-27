@@ -7,15 +7,16 @@ function App() {
   const [hour, setHour] = useState(0);
   useEffect(()=>{
     setInterval(()=>{
-      setSecond(new Date().getSeconds());
-      setHour((new Date().getHours()>12) ? new Date().getHours()-12 : new Date().getHours());
-      setMinute(new Date().getMinutes());
+      let date = new Date();
+      setSecond(date.getSeconds());
+      setHour((date.getHours()>12) ? date.getHours()-12 : date.getHours());
+      setMinute(date.getMinutes());
     },1000);
   }, []);
 
   return (
     <div className="text">
-    {`${hour}:${minute}:${second}`}
+    {`${(hour>=10)? `${hour}`:`0${hour}`}:${(minute>=10)? `${minute}`:`0${minute}`}:${(second>=10)? `${second}`:`0${second}`}`}
     </div>
   );
 }
