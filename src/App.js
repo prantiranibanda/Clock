@@ -29,9 +29,7 @@ function App() {
       <div className="parentBox">
         <button className="box" onClick={handleClick}>{(isDisplaySec)?"SECOND:OFF":"SECOND:ON"}</button>
       </div>
-      
     </div>
-    
   );
 }
 export default App;
