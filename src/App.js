@@ -29,6 +29,7 @@ function App() {
       <div className="parentBox">
         <button className="box" onClick={handleClick}>{(isDisplaySec)?"SECOND:OFF":"SECOND:ON"}</button>
       </div>
+      <div className='text1'>Hi</div>
     </div>
   );
 }
